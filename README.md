@@ -40,9 +40,9 @@ In our experiments,
 
 ## 🎞️Experiment
 In this experiment, we aim to verify whether the proposed method can effectively purify the data and alleviate the FEB problem.
-### Data
+### 1 Data
 
-#### _(1)_ Multi-view Datasets
+#### 1.1 Multi-view Datasets
 We used five multi-view datasets in this experiment:
 
 | Datasets            | Dataset URL                                            |    Password      | 
@@ -57,10 +57,10 @@ We used five multi-view datasets in this experiment:
 For these five multi-view datasets, we only provide the original clean data. You can generate noisy versions with our official noise injection code, or add noise flexibly based on your own experimental needs.
 
 
-#### _(2)_ CIFAR Datasets with Label Noise
+#### 1.2 CIFAR Datasets with Label Noise
 The CIFAR-10N and CIFAR-100N datasets used in this work can be downloaded from http://noisylabels.com.
 
-### Experiment Workflow
+### 2 Experiment Workflow
 To alleviate the FEB problem caused by label noise, we adopt a two-stage strategy of gradient space detection + feature space calibration to purify the given dataset.The specific procedure is as follows:
 - Step 1: Train the anchor model with the noisy dataset.
 - Step 2: Perform outlier detection on the noisy dataset and regard outlier samples as potential noisy samples.
@@ -68,8 +68,8 @@ To alleviate the FEB problem caused by label noise, we adopt a two-stage strateg
 - Step 4: Use the retrained anchor model to correct the labels of potential noisy samples.
 - Step 5: Retrain the anchor model with the purified dataset.
 
-#### Gradient and Feature Dual-Perception Framework
-##### _(1)_ Multi-view Datasets
+#### 2.1 Gradient and Feature Dual-Perception Framework
+##### 2.1.1 Multi-view Datasets
 Taking the first fold of Reuters5 as an example, since we manually inject noise into the multi-view dataset, two data files are required during the data preparation phase. One is R5/test_1/noisy dataset, which stores the dataset with injected noise; the other is R5/test_1/purified dataset, which saves the dataset processed by the data purification strategy. This two datasets differ from the original multi-view dataset only in the training labels.
 ```bash
 - python /code-tensorflow/A_Step_0.py
@@ -80,7 +80,7 @@ Taking the first fold of Reuters5 as an example, since we manually inject noise 
 - python /code-tensorflow/A_Step_5.py
 ```
 
-##### _(2)_ CIFAR Datasets with Label Noise
+##### 2.1.2 CIFAR Datasets with Label Noise
 ```bash
 - python /code-pytorch/cifar-10-100n/z_step_1.py --noise_type aggre --noise_path /mnt/disk1/lishuai/EA-Dataset/CIFAR-10/CIFAR-10_human.pt --dataset cifar10 --seed 0 --is_human
 - python /code-pytorch/cifar-10-100n/z_step_2.py --noise_type aggre --noise_path /mnt/disk1/lishuai/EA-Dataset/CIFAR-10/CIFAR-10_human.pt --dataset cifar10 --seed 0 --is_human
@@ -89,7 +89,7 @@ Taking the first fold of Reuters5 as an example, since we manually inject noise 
 - python /code-pytorch/cifar-10-100n/z_step_5.py --noise_type aggre --noise_path /mnt/disk1/lishuai/EA-Dataset/CIFAR-10/CIFAR-10_human.pt --dataset cifar10 --seed 0 --is_human
 ```
 
-#### The EMVC Method Based on Purified Dataset
+#### 2.2 The EMVC Method Based on Purified Dataset
 ```bash
 - python /mnt/disk1/lishuai/code-tensorflow/train_tree.py
 ```
