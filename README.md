@@ -42,7 +42,7 @@ In our experiments,
 In this experiment, we aim to verify whether the proposed method can effectively purify the data and alleviate the FEB problem.
 ### Data
 
-#### (1). Multi-view Datasets
+#### _(1)_. Multi-view Datasets
 We used five multi-view datasets in this experiment:
 
 | Datasets            | Dataset URL                                            |    Password      | 
