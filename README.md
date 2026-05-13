@@ -39,9 +39,9 @@ In our experiments,
   
 
 ## 🎞️Experiment
-In this experiment, we aim to investigate the effectiveness of EN in alleviating the FEB problem.
+In this experiment, we aim to verify whether the proposed method can effectively purify the data and alleviate the FEB problem.
 ### Data
-We used nine multi-view datasets in this experiment:
+We used five multi-view datasets in this experiment:
 
 | Datasets            | Dataset URL                                            |    Password      | 
 |---------------------|--------------------------------------------------------|------------------|
@@ -50,14 +50,12 @@ We used nine multi-view datasets in this experiment:
 | NUS-WIDE-128 (NUS)  | [link](https://pan.baidu.com/s/1udO5jvolHIbd8lOV3w4SYA)|     ls56         | 
 | Reuters5            | [link](https://pan.baidu.com/s/1j8pmo88vXsO9pBWQiHVmYA)|     ls78         | 
 | Reuters3            | [link](https://pan.baidu.com/s/1ti4OWqXTVnPDhsZ7VjahGQ)|     ls10         | 
-| CB                  | [link](https://pan.baidu.com/s/1CqnQFkPkiT-e8ETh2iYcsw)|     lss1         |  
-| MM-IMDB             | [link](https://pan.baidu.com/s/1FuiJHU8Xqjt5e_xCvnZwfw)|     lss2         |               
-| NTU RGB-D           | [link](https://pan.baidu.com/s/1eam19lCIsXxfzyX6CaOgPw)|     lss3         |                
-| EgoGesture          | [link](https://pan.baidu.com/s/1eobwPKqCRe6RereGEcwQWA)|     lss4         |                
 
 
 For the nine multi-view datasets, the CB, MM-IMDB, NTU RGB-D, and EgoGesture datasets already come with predefined train-test splits provided by the original authors, so we only repeated the experiments five times on these datasets. The remaining datasets were evaluated using five-fold cross-validation.<br>
 To facilitate code reproducibility, for the datasets where experiments were repeated five times, we provide not only the original split data but also the teacher model logits and soft labels, as well as the kernel and mutual information matrices required for the experiments. For the datasets requiring five-fold cross-validation, we likewise provide the original experimental data along with the five-fold split data, teacher model logits and soft labels, and the corresponding kernel and mutual information matrices. Readers can directly download and use these resources, enabling them to flexibly select and utilize the datasets according to their needs.
+
+The CIFAR-10N and CIFAR-100N datasets used in this work can be downloaded from http://noisylabels.com.
 
 ### Experiment Workflow
 To mitigate the FEB problem, we introduce EN into each view branch of MVM. EN is designed as a pre-trained network with the same architecture as the teacher model. Accordingly, the experimental workflow consists of: (1) pre-training EN and extracting logits; (2) constructing the mutual information matrix; (3) the EMVC method driven by unbiased fitness evaluation.
