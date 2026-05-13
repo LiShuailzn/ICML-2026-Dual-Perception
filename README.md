@@ -28,14 +28,13 @@ Experimental results demonstrate that this strategy can effectively purify the d
 
 
 ## 🖥️ Computing Environment
-<div align="center">
 The computing environment includes Ubuntu 24.04.2 LTS as the operating system, equipped with an AMD EPYC processor with 160 physical cores (320 logical threads), 566 GB of DDR4 memory, and 8 NVIDIA GeForce RTX 5090 GPUs, each with 32 GB of VRAM.
-</div>
+
 
 ## 🧪 Experimental Setup
 In our experiments,
 - For the label noise learning comparison experiments, to ensure consistency with existing methods, we implement all experiments using the PyTorch framework (PyTorch 2.8.0+cu128, Python 3.10.18, CUDA 12.8).
-- For the multi-view learning comparison experiments, we implement all experiments using the TensorFlow framework (TensorFlow 2.10.0 GPU, Python 3.9.23, CUDA 11.2).
+- For the multi-view learning comparison experiments, we implement all experiments using TensorFlow framework (TensorFlow 2.10.0 GPU, Python 3.9.23, CUDA 11.2).
 
   
 
