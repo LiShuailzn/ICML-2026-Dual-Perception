@@ -42,7 +42,7 @@ In our experiments,
 In this experiment, we aim to verify whether the proposed method can effectively purify the data and alleviate the FEB problem.
 ### Data
 
-#### _(1)_. Multi-view Datasets
+#### _(1)_ Multi-view Datasets
 We used five multi-view datasets in this experiment:
 
 | Datasets            | Dataset URL                                            |    Password      | 
@@ -57,7 +57,7 @@ We used five multi-view datasets in this experiment:
 For these five multi-view datasets, we only provide the original clean data. You can generate noisy versions with our official noise injection code, or add noise flexibly based on your own experimental needs.
 
 
-#### (2). CIFAR Datasets with Label Noise
+#### _(2)_ CIFAR Datasets with Label Noise
 The CIFAR-10N and CIFAR-100N datasets used in this work can be downloaded from http://noisylabels.com.
 
 ### Experiment Workflow
