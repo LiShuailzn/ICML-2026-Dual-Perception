@@ -57,7 +57,7 @@ We used five multi-view datasets in this experiment:
 For these five multi-view datasets, we only provide the original clean data. You can generate noisy versions with our official noise injection code, or add noise flexibly based on your own experimental needs.
 
 
-#### 1.2 CIFAR Datasets with Label Noise
+#### 1.2 CIFAR-10N and CIFAR-100N Datasets
 The CIFAR-10N and CIFAR-100N datasets used in this work can be downloaded from http://noisylabels.com.
 
 ### 2 Experiment Workflow
