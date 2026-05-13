@@ -23,7 +23,7 @@ Experimental results demonstrate that this strategy can effectively purify the d
 
 ## 🏗️Model
 <div align="center">
-  <img src="model.pdf" />
+  <img src="model.png" />
 </div>
 
 ## 🚀 Environment
