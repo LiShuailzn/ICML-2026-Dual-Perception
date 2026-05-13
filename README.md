@@ -62,15 +62,23 @@ The CIFAR-10N and CIFAR-100N datasets used in this work can be downloaded from h
 
 ### Experiment Workflow
 To alleviate the FEB problem caused by label noise, we adopt a two-stage strategy of gradient space detection + feature space calibration to purify the given dataset.The specific procedure is as follows:
-- Step 1: Train the anchor model with the original dataset.
-- Step 2: Perform outlier detection on the original dataset and regard outlier samples as potential noisy samples.
-- Step 3: Remove potential noisy samples from the original dataset to obtain a primary purified dataset, and retrain the anchor model.
+- Step 1: Train the anchor model with the noisy dataset.
+- Step 2: Perform outlier detection on the noisy dataset and regard outlier samples as potential noisy samples.
+- Step 3: Remove potential noisy samples from the noisy dataset to obtain a trusted dataset, and retrain the anchor model.
 - Step 4: Use the retrained anchor model to correct the labels of potential noisy samples.
-- Step 5: Retrain the anchor model with the final purified dataset.
+- Step 5: Retrain the anchor model with the purified dataset.
 
-#### Training
+#### Gradient and Feature Dual-Perception Framework
 ##### _(1)_ Multi-view Datasets
-
+Taking the first fold of Reuters5 as an example, since we manually inject noise into the multi-view dataset, two data files are required during the data preparation phase. One is R5/test_1/noisy dataset, which stores the dataset with injected noise; the other is R5/test_1/purified dataset, which saves the dataset processed by the data purification strategy. This two datasets differ from the original multi-view dataset only in the training labels.
+```bash
+- python /code-tensorflow/A_Step_0.py
+- python /code-tensorflow/A_Step_1.py
+- python /code-tensorflow/A_Step_2.py
+- python /code-tensorflow/A_Step_3.py
+- python /code-tensorflow/A_Step_4.py
+- python /code-tensorflow/A_Step_5.py
+```
 
 ##### _(2)_ CIFAR Datasets with Label Noise
 ```bash
@@ -80,6 +88,13 @@ To alleviate the FEB problem caused by label noise, we adopt a two-stage strateg
 - python /code-pytorch/cifar-10-100n/z_step_4.py --noise_type aggre --noise_path /mnt/disk1/lishuai/EA-Dataset/CIFAR-10/CIFAR-10_human.pt --dataset cifar10 --seed 0 --is_human
 - python /code-pytorch/cifar-10-100n/z_step_5.py --noise_type aggre --noise_path /mnt/disk1/lishuai/EA-Dataset/CIFAR-10/CIFAR-10_human.pt --dataset cifar10 --seed 0 --is_human
 ```
+
+#### The EMVC Method Based on Purified Dataset
+```bash
+- python /mnt/disk1/lishuai/code-tensorflow/train_tree.py
+```
+
+
 
 ## 📑Citation
 If you find this repository useful, please cite our paper:
