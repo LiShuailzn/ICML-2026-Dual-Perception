@@ -61,7 +61,12 @@ For these five multi-view datasets, we only provide the original clean data. You
 The CIFAR-10N and CIFAR-100N datasets used in this work can be downloaded from http://noisylabels.com.
 
 ### Experiment Workflow
-To mitigate the FEB problem, we introduce EN into each view branch of MVM. EN is designed as a pre-trained network with the same architecture as the teacher model. Accordingly, the experimental workflow consists of: (1) pre-training EN and extracting logits; (2) constructing the mutual information matrix; (3) the EMVC method driven by unbiased fitness evaluation.
+To alleviate the FEB problem caused by label noise, we adopt a two-stage strategy of gradient space detection + feature space calibration to purify the given dataset.The specific procedure is as follows:
+- Step 1: Train the anchor model with the original dataset.
+- Step 2: Perform outlier detection on the original dataset and regard outlier samples as potential noisy samples.
+- Step 3: Remove potential noisy samples from the original dataset to obtain a primary purified dataset, and retrain the anchor model.
+- Step 4: Use the retrained anchor model to correct the labels of potential noisy samples.
+- Step 5: Retrain the anchor model with the final purified dataset.
 
 #### Training
 1. **Pre-training EN and extracting logits**
