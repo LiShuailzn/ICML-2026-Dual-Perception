@@ -41,6 +41,8 @@ In our experiments,
 ## 🎞️Experiment
 In this experiment, we aim to verify whether the proposed method can effectively purify the data and alleviate the FEB problem.
 ### Data
+
+#### 1. Multi-view Datasets
 We used five multi-view datasets in this experiment:
 
 | Datasets            | Dataset URL                                            |    Password      | 
@@ -52,9 +54,10 @@ We used five multi-view datasets in this experiment:
 | Reuters3            | [link](https://pan.baidu.com/s/1ti4OWqXTVnPDhsZ7VjahGQ)|     ls10         | 
 
 
-For the nine multi-view datasets, the CB, MM-IMDB, NTU RGB-D, and EgoGesture datasets already come with predefined train-test splits provided by the original authors, so we only repeated the experiments five times on these datasets. The remaining datasets were evaluated using five-fold cross-validation.<br>
-To facilitate code reproducibility, for the datasets where experiments were repeated five times, we provide not only the original split data but also the teacher model logits and soft labels, as well as the kernel and mutual information matrices required for the experiments. For the datasets requiring five-fold cross-validation, we likewise provide the original experimental data along with the five-fold split data, teacher model logits and soft labels, and the corresponding kernel and mutual information matrices. Readers can directly download and use these resources, enabling them to flexibly select and utilize the datasets according to their needs.
+For these five multi-view datasets, we only provide the original clean data. You can generate noisy versions with our official noise injection code, or add noise flexibly based on your own experimental needs.
 
+
+#### 2. CIFAR Datasets with Label Noise
 The CIFAR-10N and CIFAR-100N datasets used in this work can be downloaded from http://noisylabels.com.
 
 ### Experiment Workflow
