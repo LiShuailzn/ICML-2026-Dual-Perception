@@ -1,10 +1,10 @@
-_**This paper has been accepted to NeurIPS 2025 as a Spotlight.**_
+_**This paper has been accepted to ICML 2026 as a Spotlight.**_
 
-<h2 align="center"> <a href="https://nips.cc/virtual/2025/poster/115223">Evolutionary Multi-View Classification via Eliminating Individual Fitness Bias</a></h2>
+<h2 align="center"> <a href="https://icml.cc/virtual/2026/poster/63057">Evolutionary Multi-View Classification with Label Noise via Gradient and Feature Dual-Perception</a></h2>
 
 <div align="center">
 
-**[Xinyan Liang<sup>1,2</sup>](https://xinyanliang.github.io/), [_Shuai Li_<sup>1</sup>](https://lishuailzn.github.io/), _Qian Guo_<sup>3</sup>, [_Yuhua Qian_<sup>1*</sup>](http://dig.sxu.edu.cn/qyh/),  _Bingbing Jiang_<sup>4</sup>, _Tingjin Luo_<sup>5</sup>, _Liang Du_<sup>1</sup>**
+**[_Shuai Li_<sup>1</sup>](https://lishuailzn.github.io/), [Xinyan Liang<sup>1,2</sup>](https://xinyanliang.github.io/), [_Yuhua Qian_<sup>1*</sup>](http://dig.sxu.edu.cn/qyh/)**
 
 <sup>1</sup>Institute of Big Data Science and Industry, Shanxi University<br>
 <sup>2</sup>State Key Laboratory of AI Safety, Beijing, 100086<br>
