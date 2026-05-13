@@ -4,7 +4,7 @@ _**This paper has been accepted to ICML 2026 as a Spotlight.**_
 
 <div align="center">
 
-**[_Shuai Li_<sup>1</sup>](https://lishuailzn.github.io/), [Xinyan Liang<sup>1, *</sup>](https://xinyanliang.github.io/), [_Yuhua Qian_<sup>1*</sup>](http://dig.sxu.edu.cn/qyh/), _Li LV_<sup>1*</sup>**
+**[_Shuai Li_<sup>1</sup>](https://lishuailzn.github.io/), [Xinyan Liang<sup>1*</sup>](https://xinyanliang.github.io/), [_Yuhua Qian_<sup>1</sup>](http://dig.sxu.edu.cn/qyh/), _Li LV_<sup>1</sup>**
 
 <sup>1</sup>Institute of Big Data Science and Industry, Key Laboratory of Evolutionary Science Intelligence of Shanxi Province, School of Artificial Intelligence, Shanxi University<br>
 
