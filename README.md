@@ -4,13 +4,9 @@ _**This paper has been accepted to ICML 2026 as a Spotlight.**_
 
 <div align="center">
 
-**[_Shuai Li_<sup>1</sup>](https://lishuailzn.github.io/), [Xinyan Liang<sup>1,2</sup>](https://xinyanliang.github.io/), [_Yuhua Qian_<sup>1*</sup>](http://dig.sxu.edu.cn/qyh/)**
+**[_Shuai Li_<sup>1</sup>](https://lishuailzn.github.io/), [Xinyan Liang<sup>1, *</sup>](https://xinyanliang.github.io/), [_Yuhua Qian_<sup>1*</sup>](http://dig.sxu.edu.cn/qyh/, [_Li LV_<sup>1*</sup>]**
 
-<sup>1</sup>Institute of Big Data Science and Industry, Shanxi University<br>
-<sup>2</sup>State Key Laboratory of AI Safety, Beijing, 100086<br>
-<sup>3</sup>School of Computer Science and Technology, Taiyuan University of Science and Technology<br>
-<sup>4</sup>School of Information Science and Technology, Hangzhou Normal University<br>
-<sup>5</sup>College of Science, National University of Defense Technology<br>
+<sup>1</sup>Institute of Big Data Science and Industry, Key Laboratory of Evolutionary Science Intelligence of Shanxi Province, School of Artificial Intelligence, Shanxi University<br>
 
 
 <a href='https://nips.cc/virtual/2025/poster/115223'><img src='https://img.shields.io/badge/NIPS%202025-Poster-blue'></a>&nbsp;
