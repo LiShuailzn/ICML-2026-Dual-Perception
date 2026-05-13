@@ -9,7 +9,7 @@ _**This paper has been accepted to ICML 2026 as a Spotlight.**_
 <sup>1</sup>Institute of Big Data Science and Industry, Key Laboratory of Evolutionary Science Intelligence of Shanxi Province, School of Artificial Intelligence, Shanxi University<br>
 
 
-<a href='https://icml.cc/virtual/2026/poster/63057'><img src='https://img.shields.io/badge/ICML%202026-Poster-blue'></a>&nbsp;
+<a href='https://icml.cc/virtual/2026/poster/63057'><img src='https://img.shields.io/badge/ICML%202026-Spotlight-blue'></a>&nbsp;
 
 </div>
 
