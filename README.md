@@ -1,6 +1,6 @@
 _**This paper has been accepted to ICML 2026 as a Spotlight.**_
 
-<h2 align="center"> <a href="https://icml.cc/virtual/2026/poster/63057">Evolutionary Multi-View Classification with Label Noise via Gradient and Feature Dual-Perception</a></h2>
+<h2 align="center"> <a href="https://icml.cc/virtual/2026/poster/63057">GFD-EMVC: Evolutionary Multi-View Classification with Label Noise via Gradient and Feature Dual-Perception</a></h2>
 
 <div align="center">
 
@@ -115,7 +115,7 @@ year={2026},
 We list below the works most relevant to this paper, including but not limited to the following:<br>
 **_Our research group [[link]](https://xinyanliang.github.io/publications/)_**
 - Evolutionary deep fusion method and its application in chemical structure recognition, _IEEE TEVC21_, [[paper]](https://ieeexplore.ieee.org/document/9373673)
-- Evolutionary multi-view classification with label noise via gradient and feature dual-perception, _ICML26_, [[paper]](https://github.com/LiShuailzn/ICML-2025-Spotlight)
+- GFD-EMVC: Evolutionary Multi-View Classification with Label Noise via Gradient and Feature Dual-Perception, _ICML26_, [[paper]](https://github.com/LiShuailzn/ICML-2025-Spotlight)
 - Improving evolutionary multi-view classification via eliminating individual fitness bias, _NeurIPS25_, [[paper]](https://github.com/LiShuailzn/Neurips-2025-EFB-EMVC)
 - Trusted multi-view classification via evolutionary multi-view fusion, _ICLR25_, [[paper]](https://openreview.net/pdf?id=M3kBtqpys5)
 - DC-NAS: Divide-and-conquer neural architecture search for multi-modal classification, _AAAI24_, [[paper]](https://ojs.aaai.org/index.php/AAAI/article/view/29281)
