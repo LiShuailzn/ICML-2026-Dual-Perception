@@ -71,7 +71,7 @@ To alleviate the FEB problem caused by label noise, we adopt a two-stage strateg
 #### Training
 ##### _(1)_ Multi-view Datasets
 
-#### _(2)_ CIFAR Datasets with Label Noise
+##### _(2)_ CIFAR Datasets with Label Noise
 ```bash
 - python /code-pytorch/cifar-10-100n/z_step_1.py --noise_type aggre --noise_path /mnt/disk1/lishuai/EA-Dataset/CIFAR-10/CIFAR-10_human.pt --dataset cifar10 --seed 0 --is_human
 - python /code-pytorch/cifar-10-100n/z_step_2.py --noise_type aggre --noise_path /mnt/disk1/lishuai/EA-Dataset/CIFAR-10/CIFAR-10_human.pt --dataset cifar10 --seed 0 --is_human
