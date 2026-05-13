@@ -70,7 +70,7 @@ To alleviate the FEB problem caused by label noise, we adopt a two-stage strateg
 
 #### 2.1 Gradient and Feature Dual-Perception Framework
 ##### 2.1.1 Multi-view Datasets
-Taking the first fold of Reuters5 as an example, since we manually inject noise into the multi-view dataset, two data files are required during the data preparation phase. One is R5/test_1/noisy dataset, which stores the dataset with injected noise; the other is R5/test_1/purified dataset, which saves the dataset processed by the data purification strategy. This two datasets differ from the original multi-view dataset only in the training labels.
+Taking the first fold of Reuters5 as an example, since we manually inject noise into the multi-view dataset, two data files are required during the data preparation phase. One is _R5/test_1/noisy dataset_, which stores the dataset with injected noise; the other is _R5/test_1/purified dataset_, which saves the dataset processed by the data purification strategy. This two datasets differ from the original multi-view dataset only in the training labels.
 ```bash
 - python /code-tensorflow/A_Step_0.py
 - python /code-tensorflow/A_Step_1.py
