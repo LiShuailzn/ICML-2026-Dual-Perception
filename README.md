@@ -69,37 +69,37 @@ To alleviate the FEB problem caused by label noise, we adopt a two-stage strateg
 - Step 5: Retrain the anchor model with the final purified dataset.
 
 #### Training
-1. **Pre-training EN and extracting logits**
+##### _(1)_ Multi-view Datasets
+
+#### _(2)_ CIFAR Datasets with Label Noise
 ```bash
-python code/train_T.py
-python code/gain_T_logits.py
-```
-2. **Constructing the mutual information matrix**
-```bash
-python code/HSIC/kernel_matrix.py
-python code/HSIC/HSIC.py
-```
-3. **The EMVC method driven by unbiased fitness evaluation**
-```bash
-python code/train_tree_youtube.py
+- python /code-pytorch/cifar-10-100n/z_step_1.py --noise_type aggre --noise_path /mnt/disk1/lishuai/EA-Dataset/CIFAR-10/CIFAR-10_human.pt --dataset cifar10 --seed 0 --is_human
+- python /code-pytorch/cifar-10-100n/z_step_2.py --noise_type aggre --noise_path /mnt/disk1/lishuai/EA-Dataset/CIFAR-10/CIFAR-10_human.pt --dataset cifar10 --seed 0 --is_human
+- python /code-pytorch/cifar-10-100n/z_step_3.py --noise_type aggre --noise_path /mnt/disk1/lishuai/EA-Dataset/CIFAR-10/CIFAR-10_human.pt --dataset cifar10 --seed 0 --is_human
+- python /code-pytorch/cifar-10-100n/z_step_4.py --noise_type aggre --noise_path /mnt/disk1/lishuai/EA-Dataset/CIFAR-10/CIFAR-10_human.pt --dataset cifar10 --seed 0 --is_human
+- python /code-pytorch/cifar-10-100n/z_step_5.py --noise_type aggre --noise_path /mnt/disk1/lishuai/EA-Dataset/CIFAR-10/CIFAR-10_human.pt --dataset cifar10 --seed 0 --is_human
 ```
 
 ## 📑Citation
 If you find this repository useful, please cite our paper:
 ```
-@inproceedings{
-liang2025EFB-EMVC,
-title={Evolutionary Multi-View Classification via Eliminating Individual Fitness Bias},
-author={Xinyan Liang, Shuai Li, Qian Guo, Yuhua Qian, Bingbing Jiang, Tingjin Luo, Liang Du},
-booktitle={Proceedings of the Thirty-ninth Annual Conference on Neural Information Processing Systems},
-year={2025},
+@inproceedings{li2026Gradient,
+title={Evolutionary Multi-View Classification with Label Noise via Gradient and Feature Dual-Perception},
+author={Shuai Li, Xinyan Liang, Yuhua Qian, Li Lv},
+booktitle={Forty-third International Conference on Machine Learning},
+year={2026},
 }
 ```
+
+
+
+
 
 ## 🔬 Related Work
 We list below the works most relevant to this paper, including but not limited to the following:<br>
 **_Our research group [[link]](https://xinyanliang.github.io/publications/)_**
 - Evolutionary deep fusion method and its application in chemical structure recognition, _IEEE TEVC21_, [[paper]](https://ieeexplore.ieee.org/document/9373673)
+- Evolutionary multi-view classification with label noise via gradient and feature dual-perception, _ICML26_, [[paper]](https://github.com/LiShuailzn/ICML-2025-Spotlight)
 - Evolutionary multi-view classification via eliminating individual fitness bias, _NeurIPS25_, [[paper]](https://github.com/LiShuailzn/Neurips-2025-EFB-EMVC)
 - Trusted multi-view classification via evolutionary multi-view fusion, _ICLR25_, [[paper]](https://openreview.net/pdf?id=M3kBtqpys5)
 - DC-NAS: Divide-and-conquer neural architecture search for multi-modal classification, _AAAI24_, [[paper]](https://ojs.aaai.org/index.php/AAAI/article/view/29281)
