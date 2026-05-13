@@ -91,7 +91,7 @@ Taking the first fold of Reuters5 as an example, since we manually inject noise 
 
 #### 2.2 The EMVC Method Based on Purified Dataset
 ```bash
-- python /mnt/disk1/lishuai/code-tensorflow/train_tree.py
+- python /code-tensorflow/train_tree.py
 ```
 
 
